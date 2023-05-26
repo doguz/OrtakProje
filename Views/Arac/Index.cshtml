@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Arac>
+@{
+    ViewData["Title"] = "Araç Listesi";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="border border-secondary border-1 m-3 p-3 ">
+
+    <div class="container p-3">
+        <div class="row pt-4">
+            <h1 class="text-primary text-center">Araç Listesi</h1>
+        </div>
+    </div>
+
+    <table class="table-bordered table-striped" style="width:100%">
+        <thead>
+            <tr class="text-center">
+                <th>Sıra No</th>
+                <th>Plaka</th>
+                <th>Kilometre</th>
+                <th>Aidiyet</th>
+                <th>Muayene Tarihi</th>
+                <th>Model Yılı</th>
+                <th>Marka</th>
+                <th>Model</th>
+                <th>Vites</th>
+                <th>Yakıt</th>
+                <th>Aidiyet</th>
+                <th>Rengi</th>
+                <th>Açıklama</th>
+                <th></th>
+                <th class="text-end">
+                    <a asp-controller="Arac" asp-action="Ekle" class="btn btn-primary"><i class="bi bi-plus-circle"></i> &nbsp; Araç Ekle</a>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.ResmiPlaka</td>
+                    <td>@item.Kilometre</td>
+                    <td>@item.AracAidiyet</td>
+                    <td>@item.MuayeneTarihi</td>
+                    <td>@item.AracModelYili</td>
+                    <td>@item.AracModel.AracKategori.Kategori</td>
+                    <td>@item.AracModel.Model</td>
+                    <td>@item.AracVitesTipi</td>
+                    <td>@item.AracYakit</td>
+                    <td>@item.AracAidiyet</td>
+                    <td>@item.Renk</td>
+                    <td>@item.Aciklama</td>
+                    <td>
+                        <div class="btn-group" role="group">
+                            <a asp-controller="Arac" asp-action="Detay" class="btn btn-info"><i class="bi bi-list-ul"></i></a>
+                            <a asp-controller="Arac" asp-action="Guncelle" asp-route-id="@item.Id" class="btn btn-warning mx-2"><i class="bi bi-pencil-square"></i></a>
+                            <a asp-controller="Arac" asp-action="Sil" asp-route-id="@item.Id" class="btn btn-danger"><i class="bi bi-x-circle"></i></a>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,43 @@
+﻿@model IEnumerable<ApplicaitonUser>
+@{
+    ViewData["Title"] = "***";
+}
+
+<h1>Index</h1>
+
+<div class="bg-primary text-white p-1 m-1">
+    <h2>Personel Listesi</h2>
+</div>
+
+<table class="table table-bordered table-striped m-1 p-1">
+    <tr>
+        <td>Id</td>
+        <td>Ad Soyad</td>
+        <td>Email</td>
+    </tr>
+
+    @if (Model.Count() == 0)
+    {
+        <tr>
+            <td colspan="3" class="text-center">
+                Kayıtlı kullanıcı yoktur.
+            </td>
+        </tr>
+    }
+    else
+    {
+        foreach ( var personel in Model)
+        {
+            <tr>
+                <td>@personel.Id</td>
+                <td>@personel.UserName</td>
+                <td>@personel.Email</td>
+            </tr>
+        }
+    }
+
+</table>
+
+<a asp-action="Kayit" class="btn btn-primary">
+    Yeni Kayıt
+</a>

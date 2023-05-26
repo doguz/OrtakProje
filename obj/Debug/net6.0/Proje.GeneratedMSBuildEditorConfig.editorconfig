@@ -1,0 +1,93 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Proje
+build_property.RootNamespace = Proje
+build_property.ProjectDir = C:\inetpub\wwwroot\Proje\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
+build_property.MSBuildProjectDirectory = C:\inetpub\wwwroot\Proje
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/inetpub/wwwroot/Proje/Views/Arac/Ekle - Kopyala.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJhY1xFa2xlIC0gS29weWFsYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/inetpub/wwwroot/Proje/Views/Arac/Ekle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJhY1xFa2xlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/inetpub/wwwroot/Proje/Views/Arac/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJhY1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/inetpub/wwwroot/Proje/Views/Arac/Sil.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJhY1xTaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/inetpub/wwwroot/Proje/Views/DemirbasMarka/Ekle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVtaXJiYXNNYXJrYVxFa2xlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/inetpub/wwwroot/Proje/Views/DemirbasMarka/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVtaXJiYXNNYXJrYVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/inetpub/wwwroot/Proje/Views/DemirbasMarka/Sil.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVtaXJiYXNNYXJrYVxTaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/inetpub/wwwroot/Proje/Views/Demirbas/Ekle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVtaXJiYXNcRWtsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/inetpub/wwwroot/Proje/Views/Demirbas/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVtaXJiYXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/inetpub/wwwroot/Proje/Views/Home/Bilgilendirme.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxCaWxnaWxlbmRpcm1lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/inetpub/wwwroot/Proje/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/inetpub/wwwroot/Proje/Views/Personel/Kayit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uZWxcS2F5aXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/inetpub/wwwroot/Proje/Views/Personel/Liste.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uZWxcTGlzdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/inetpub/wwwroot/Proje/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/inetpub/wwwroot/Proje/Views/Shared/_Notifications.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Ob3RpZmljYXRpb25zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/inetpub/wwwroot/Proje/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/inetpub/wwwroot/Proje/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/inetpub/wwwroot/Proje/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/inetpub/wwwroot/Proje/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-wzp8xvl3am

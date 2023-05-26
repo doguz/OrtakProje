@@ -1,0 +1,36 @@
+﻿@model DemirbasMarka
+@{
+    ViewBag.Title = "Demirbaş Silme";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<form method="post" class="border p-3 m-3">
+
+    <h2 class="row p-3">Demirbaş Silme</h2>
+    <hr />
+    <input asp-for="Id" hidden />
+    @*<div asp-validation-summary="All"></div>*@
+    <div class="container-fluid">
+        <div class="row">
+            <h2>@Model.Id numaralaı kaydı silmek istediğinizden emin misiniz?</h2>
+            @*@foreach (var i in Model)
+            {*@
+                <ul>
+                 
+                    <li>@Model.Marka</li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            @*}*@
+
+        </div>
+        <div class="row text-right">
+            <a asp-controller="Demirbas" asp-action="Index" class="btn btn-light col-2 m-3">Liste <i class="bi bi-arrow-bar-left"></i></a>
+
+            <button class="btn btn-danger col-2 m-3">Sil</button>
+            <button class="btn btn-d col-2 m-3"></button>
+        </div>
+
+    </div>
+</form>

@@ -1,0 +1,61 @@
+﻿@model Proje.Models.Demirbas
+@{
+    ViewBag.Title = "Demirbaş Ekleme";
+    // Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form method="post">
+    <div class="border p-3 m-3">
+        <h2 class="text-primary">Demirbaş Ekle</h2>
+        <hr />
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-3 p-3">
+                    @Html.DropDownList("ddlMarka", @ViewBag.demirbasMarkaValues, "-- Marka Seçiniz --", new { @class="form-control"})
+                </div>
+                <div class="col-3 p-3">
+                    @Html.DropDownList("ddlModel", @ViewBag.demirbasModelValues, "-- Model Seçiniz --", new { @class="form-control"})
+                </div>
+                <div class="col-3 p-3">
+                    @Html.DropDownList("ddlCinsi", @ViewBag.demirbasCinsiValues, "-- Demirbaş Cinsi --", new { @class="form-control"})
+                </div>
+                <div class="col-3 p-3">
+                    <input asp-for="SeriNo" class="form-control" style="" placeholder="-- Seri Numarası Giriniz --" />
+                </div>
+                <div class="col-3 p-3">
+                    <textarea asp-for="Aciklama" placeholder="Açıklama..." class="form-control col-6" rows="4" cols="50"></textarea>
+                </div>
+            </div>
+            <div class="col-3 p-3 text-end">
+                <button type="submit" class="btn btn-primary">Kaydet</button>
+            </div>
+        </div>
+    </div>
+    @*<div asp-validation-summary="All"></div>*@
+
+</form>
+
+@section Scripts
+    {
+    <partial name="_ValidationScriptsPartial" />
+    <script asp-append-version="true">
+        $(function () {
+            $('#ddlMarka').change(function () {
+                var id = $('#ddlMarka').val();
+                $.ajax({
+                    url: '/Demirbas/DemirbasMarkaModelDDL',
+                    data: { item: id },
+                    type: "GET",
+                    dataType: "Json",
+                    success: function (data) {
+                        console.log(data);
+                        $('#ddlModel').empty();
+                        for (var i = 0; i < data.length; i++) {
+                            $('#ddlModel').append("<option value='" + data[i].value + "'>" + data[i].text + "</option>");
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+}

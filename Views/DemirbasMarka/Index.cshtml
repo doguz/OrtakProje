@@ -1,0 +1,31 @@
+﻿@model IEnumerable<DemirbasMarka>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Demirbaş Marka Listesi</h2>
+
+<table class="table table-bordered table-striped">
+    <thead>
+    <th>Sıra</th>
+    <th>Marka</th>
+    <th class="text-end">
+        <a asp-controller="DemirbasMarka" asp-action="Ekle" class="btn btn-primary"><i class="bi bi-plus-circle"></i> &nbsp; Marka Ekle</a>
+    </th>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Marka</td>
+                <td class="text-end">
+                    <a asp-controller="DemirbasMarka" asp-action="Detay" asp-route-id="@item.Id" class="btn btn-info"><i class="bi bi-list-ul"></i></a>
+                    <a asp-controller="DemirbasMarka" asp-action="Guncelle" asp-route-id="@item.Id" class="btn btn-warning mx-2"><i class="bi bi-pencil-square"></i></a>
+                    <a asp-controller="DemirbasMarka" asp-action="Sil" asp-route-id="@item.Id" class="btn btn-danger"><i class="bi bi-x-circle"></i></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,83 @@
+﻿@model Arac
+@{
+    ViewBag.Title = "Araç Ekleme";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form method="post" asp-action="Ekle">
+    <div class="border p-3 m-3">
+        <h2 class="text-primary">Araç Ekle</h2>
+        <hr />
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-3 p-3">
+                    <input asp-for="ResmiPlaka" class="form-control" style="text-transform: uppercase" placeholder="-- Resmi Plaka Giriniz --" />
+                </div>
+                <div class="col-3 p-3">
+                    <input type="date" asp-for="MuayeneTarihi" placeholder="-- Son Geçerli Muayene Tarihi --" class="form-control" />
+                </div>
+                <div class="col-3 p-3">
+                    <input type="number" asp-for="Kilometre" placeholder="Kilometre" class="form-control" />
+                </div>
+               <div class="col-3 p-3">
+                    <select asp-for="AracModelYili" class="form-control" asp-items="@ViewBag.aracModelYiliValues" id="ddlModelYili"><option selected disabled>-- Model Yılı --</option></select>
+                </div>
+                <div class="col-3 p-3">
+                    <select class="form-control" asp-items="@ViewBag.aracMarkaValues" id="ddlMarka"><option selected disabled>-- Marka Seçiniz --</option></select>
+                    @*@Html.DropDownList("ddlMarka", new SelectList(ViewBag.aracMarkaValues,"Id","Marka"), "-- Marka Seçiniz --", new { @class="form-control"})*@
+                </div>
+                <div class="col-3 p-3">
+                    <select asp-for="AracModelId" class="form-control" asp-items="@ViewBag.aracModelValues" id="ddlModel"><option selected disabled>-- Model Seçiniz --</option></select>
+                    @*@Html.DropDownList("ddlModel", @ViewBag.aracModelValues, "-- Model Seçiniz --", new { @class="form-control"})*@
+                </div>
+                <div class="col-3 p-3">
+                    <select asp-for="AracVitesTipiId" class="form-control" asp-items="@ViewBag.aracVitesTipiValues" id="ddlVites"><option selected disabled>-- Vites Tipi --</option></select>
+                    @*@Html.DropDownList("ddlVites", @ViewBag.aracVitesTipiValues , "-- Vites Tipi --", new { @class="form-control"})*@
+                </div>
+                <div class="col-3 p-3">
+                    <select asp-for="AracYakitId" class="form-control" asp-items="@ViewBag.aracYakitValues" id="ddlYakit"><option selected disabled>-- Yakıt Tipi --</option></select>
+                    @*@Html.DropDownList("ddlYakit", @ViewBag.aracYakitValues, "-- Yakıt Tipi --", new { @class="form-control"})*@
+                </div>
+                <div class="col-3 p-3">
+                    <select asp-for="AracAidiyetId" class="form-control" asp-items="@ViewBag.aracAidiyetValues" id="ddlAidiyet"><option selected disabled>-- Aidiyeti --</option></select>
+                    @*@Html.DropDownList("ddlAidiyet", @ViewBag.aracAidiyetValues, "-- Aidiyeti --", new { @class="form-control"})*@
+                </div>
+                <div class="col-3 p-3">
+                    <select asp-for="RenkId" class="form-control" asp-items="@ViewBag.renkValues" id="ddlRenk"><option selected disabled>-- Rengi --</option></select>
+                    @*@Html.DropDownList("ddlRenk", @ViewBag.renkValues, "-- Rengi --", new { @class="form-control"})*@
+                </div>
+                <div class="col-3 p-3">
+                    <textarea asp-for="Aciklama" placeholder="Açıklama..." class="form-control col-6" rows="4" cols="50"></textarea>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Kaydet</button>
+        </div>
+    </div>
+    @*<div asp-validation-summary="All"></div>*@
+
+</form>
+
+@section Scripts
+    {
+    @*<partial name="_ValidationScriptsPartial" />*@
+    <script asp-append-version="true">
+        $(function () {
+            $('#ddlMarka').change(function () {
+                var id = $('#ddlMarka').val();
+                $.ajax({
+                    url: '/Arac/AracMarkaModelDDL',
+                    data: { item: id },
+                    type: "GET",
+                    dataType: "Json",
+                    success: function (data) {
+                        console.log(data);
+                        $('#ddlModel').empty();
+                        for (var i = 0; i < data.length; i++) {
+                            $('#ddlModel').append("<option value='" + data[i].value + "'>" + data[i].text + "</option>");
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+}

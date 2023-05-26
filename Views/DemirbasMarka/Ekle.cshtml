@@ -1,0 +1,25 @@
+﻿@model DemirbasMarka
+
+@{
+    ViewBag.Title = "Demirbaş Marka Ekleme";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<form method="post">
+    <div class="border p-3 m-3">
+        <h2 class="row p-3">Demirbaş Marka Ekle</h2>
+        <hr />
+    </div>
+    @*<div asp-validation-summary="All"></div>*@
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3">
+                <label asp-for="Marka"></label>
+                <input asp-for="Marka" class="form-control" />
+            </div>
+            <div>
+                <button type="submit" class="btn btn-small btn-primary p-3 m-3 text-end"><i class="bi bi-file-arrow-down"></i> Kaydet</button>
+                <a asp-controller="DemirbasMarka" asp-action="Ekle" class="btn btn-secondary">Liste  <i class="bi bi-list-ul"></i></a>
+            </div>
+        </div>
+    </div>
+</form>
